@@ -31,15 +31,42 @@
         </p>
     </div>
 
-    <div class="menu-filters">
-        <button class="menu-filter active" data-filter="all" aria-pressed="true">All</button>
-        <button class="menu-filter" data-filter="coffee" aria-pressed="false">Coffee</button>
-        <button class="menu-filter" data-filter="non-coffee" aria-pressed="false">Non-Coffee</button>
-        <button class="menu-filter" data-filter="filipino" aria-pressed="false">Filipino Favorites</button>
-        <button class="menu-filter" data-filter="pastries" aria-pressed="false">Pastries and Desserts</button>
-        <button class="menu-filter" data-filter="food" aria-pressed="false">Food and Light Meals</button>
+    <!-- MENU CATEGORY FILTERS -->
+    <div class="menu-filters" role="group" aria-label="Filter menu by category">
+
+        <button type="button" class="menu-filter active"
+                data-filter="all" aria-pressed="true">
+            All
+        </button>
+
+        <button type="button" class="menu-filter"
+                data-filter="coffee" aria-pressed="false">
+            Coffee
+        </button>
+
+        <button type="button" class="menu-filter"
+                data-filter="non-coffee" aria-pressed="false">
+            Non-Coffee
+        </button>
+
+        <button type="button" class="menu-filter"
+                data-filter="filipino" aria-pressed="false">
+            Filipino Favorites
+        </button>
+
+        <button type="button" class="menu-filter"
+                data-filter="pastries" aria-pressed="false">
+            Pastries and Desserts
+        </button>
+
+        <button type="button" class="menu-filter"
+                data-filter="food" aria-pressed="false">
+            Food and Light Meals
+        </button>
+
     </div>
 
+    <!-- MENU PRODUCTS -->
     <div class="menu-grid">
 
         <!-- COFFEE -->
