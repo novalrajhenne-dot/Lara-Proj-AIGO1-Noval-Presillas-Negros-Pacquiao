@@ -5,38 +5,42 @@
 @endpush
 
 @section('content')
-    <main class="contact-page">
+    <div class="contact-page">
         <h1>Contact SILONG</h1>
-        <p>Questions about the café? Send us an inquiry.</p>
+        <p>Plan a visit to SILONG or try our inquiry form.</p>
 
         <div class="contact-columns">
-            <section>
+            <section class="contact-details">
                 <h2>Visit us</h2>
-                <p>Ampayon, Butuan City, near Caraga State University</p>
-                <p>Proposed hours: Monday to Saturday, 9 AM to 7 PM</p>
-                <p>Sample email: hello@silong.example</p>
-                <p>Facebook and Instagram pages coming soon.</p>
+                <p><strong>Location:</strong> Ampayon, Butuan City, near Caraga State University</p>
+                <p><strong>Proposed hours:</strong> Monday to Saturday, 9 AM to 7 PM</p>
+                <p><strong>Email:</strong> hello@silongcafe.com</p>
+                <p><strong>Facebook and Instagram:</strong> @silongcafe</p>
             </section>
 
             <section>
-                <h2>Send an inquiry</h2>
-                <p>This form checks your entries in the browser. It does not send email.</p>
+                <h2>Try the inquiry form</h2>
+                <p>This demo checks your entries without sending an email.</p>
 
                 <form id="contact-form" novalidate>
                     <label for="full-name">Full name</label>
-                    <input id="full-name" type="text" autocomplete="name" required>
+                    <input id="full-name" type="text" autocomplete="name"
+                           aria-describedby="full-name-error" required>
                     <small id="full-name-error" class="contact-error"></small>
 
                     <label for="email">Email</label>
-                    <input id="email" type="email" autocomplete="email" required>
+                    <input id="email" type="email" autocomplete="email"
+                           aria-describedby="email-error" required>
                     <small id="email-error" class="contact-error"></small>
 
                     <label for="subject">Subject</label>
-                    <input id="subject" type="text" required>
+                    <input id="subject" type="text"
+                           aria-describedby="subject-error" required>
                     <small id="subject-error" class="contact-error"></small>
 
                     <label for="message">Message</label>
-                    <textarea id="message" rows="5" required></textarea>
+                    <textarea id="message" rows="5"
+                              aria-describedby="message-error" required></textarea>
                     <small id="message-error" class="contact-error"></small>
 
                     <button type="submit">Check inquiry</button>
@@ -44,7 +48,7 @@
                 </form>
             </section>
         </div>
-    </main>
+    </div>
 @endsection
 
 @push('scripts')
