@@ -73,3 +73,14 @@
         gap: 1rem;
     }
 }
+
+.contact-details {
+    align-self: start;
+    padding: 1.5rem;
+    background: #f4efe4;
+    border-left: 4px solid #596444;
+}
+
+.contact-details h2 {
+    margin-top: 0;
+}
