@@ -45,6 +45,14 @@ document.addEventListener('DOMContentLoaded', function () {
             // Highlight the selected button
             button.classList.add('active');
 
+            // Update accessibility state
+            filterButtons.forEach(function (filter) {
+                filter.setAttribute(
+                    'aria-pressed',
+                    filter === button ? 'true' : 'false'
+                );
+            });
+
         });
 
     });

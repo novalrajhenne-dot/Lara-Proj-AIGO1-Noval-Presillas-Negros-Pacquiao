@@ -32,12 +32,12 @@
     </div>
 
     <div class="menu-filters">
-        <button class="menu-filter active" data-filter="all">All</button>
-        <button class="menu-filter" data-filter="coffee">Coffee</button>
-        <button class="menu-filter" data-filter="non-coffee">Non-Coffee</button>
-        <button class="menu-filter" data-filter="filipino">Filipino Favorites</button>
-        <button class="menu-filter" data-filter="pastries">Pastries and Desserts</button>
-        <button class="menu-filter" data-filter="food">Food and Light Meals</button>
+        <button class="menu-filter active" data-filter="all" aria-pressed="true">All</button>
+        <button class="menu-filter" data-filter="coffee" aria-pressed="false">Coffee</button>
+        <button class="menu-filter" data-filter="non-coffee" aria-pressed="false">Non-Coffee</button>
+        <button class="menu-filter" data-filter="filipino" aria-pressed="false">Filipino Favorites</button>
+        <button class="menu-filter" data-filter="pastries" aria-pressed="false">Pastries and Desserts</button>
+        <button class="menu-filter" data-filter="food" aria-pressed="false">Food and Light Meals</button>
     </div>
 
     <div class="menu-grid">
