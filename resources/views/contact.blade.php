@@ -13,7 +13,7 @@
             <section class="contact-details">
                 <h2>Visit us</h2>
                 <p><strong>Location:</strong> Ampayon, Butuan City, near Caraga State University</p>
-                <p><strong>Proposed hours:</strong> Monday to Saturday, 9 AM to 7 PM</p>
+                <p><strong>Operating hours:</strong> Monday to Saturday, 9 AM to 7 PM</p>
                 <p><strong>Email:</strong> hello@silongcafe.com</p>
                 <p><strong>Facebook and Instagram:</strong> @silongcafe</p>
             </section>
