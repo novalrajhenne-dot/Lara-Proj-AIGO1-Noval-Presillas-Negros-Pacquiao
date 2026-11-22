@@ -1,0 +1,272 @@
+
+/* =========================================
+   SILONG CAFE - MENU PAGE
+   Member 3
+   ========================================= */
+
+/* BRAND COLORS */
+:root {
+    --menu-olive: #596344;
+    --menu-olive-dark: #414a32;
+    --menu-cream: #f7f4ec;
+    --menu-white: #fffdf8;
+    --menu-brown: #76604d;
+    --menu-text: #342f29;
+    --menu-muted: #81786d;
+    --menu-border: #e8e1d5;
+}
+
+/* MENU HERO */
+.menu-hero {
+    background: var(--menu-cream);
+    padding: 105px 24px 90px;
+    text-align: center;
+}
+
+.menu-hero-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.menu-eyebrow {
+    color: var(--menu-olive);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.menu-hero h1 {
+    color: var(--menu-text);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 70px);
+    font-weight: 600;
+    line-height: 1.15;
+    margin: 0 0 22px;
+}
+
+.menu-hero h1 span {
+    color: var(--menu-olive);
+}
+
+.menu-hero-content > p:last-child {
+    max-width: 570px;
+    margin: 0 auto;
+    color: var(--menu-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* MENU SECTION */
+.menu-section {
+    background: var(--menu-white);
+    padding: 85px 6% 100px;
+}
+
+.menu-heading {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.menu-heading h2 {
+    color: var(--menu-text);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+.menu-heading > p:last-child {
+    color: var(--menu-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* CATEGORY FILTERS */
+.menu-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0 auto 45px;
+    max-width: 1100px;
+}
+
+.menu-filter {
+    border: 1px solid var(--menu-border);
+    border-radius: 30px;
+    background: transparent;
+    color: var(--menu-text);
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 21px;
+    transition: background 0.2s ease, color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.menu-filter:hover,
+.menu-filter.active {
+    background: var(--menu-olive);
+    border-color: var(--menu-olive);
+    color: white;
+}
+
+.menu-filter:focus-visible {
+    outline: 3px solid #b9a77e;
+    outline-offset: 3px;
+}
+
+/* MENU PRODUCT GRID */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* PRODUCT CARD */
+.menu-card {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--menu-white);
+    border: 1px solid var(--menu-border);
+    border-radius: 5px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(52, 47, 41, 0.09);
+}
+
+.menu-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    background: var(--menu-cream);
+}
+
+.menu-card-content {
+    padding: 23px 22px 25px;
+}
+
+.menu-category {
+    display: inline-block;
+    color: var(--menu-olive);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.menu-card h3 {
+    color: var(--menu-text);
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+.menu-card-content p {
+    color: var(--menu-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 47px;
+    margin: 0 0 17px;
+}
+
+.menu-price {
+    display: block;
+    color: var(--menu-olive);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* SAMPLE MENU NOTE */
+.menu-note {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    color: var(--menu-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .menu-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .menu-hero {
+        padding: 75px 22px 65px;
+    }
+
+    .menu-hero-content > p:last-child {
+        font-size: 14px;
+    }
+
+    .menu-section {
+        padding: 60px 20px 75px;
+    }
+
+    .menu-heading {
+        margin-bottom: 30px;
+    }
+
+    .menu-filters {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 5px 2px 14px;
+        margin-bottom: 30px;
+    }
+
+    .menu-filter {
+        flex: 0 0 auto;
+        font-size: 12px;
+        padding: 10px 16px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 23px;
+    }
+
+    .menu-card img {
+        aspect-ratio: 16 / 10;
+    }
+
+    .menu-card-content {
+        padding: 20px;
+    }
+
+    .menu-card h3 {
+        font-size: 22px;
+    }
+}
