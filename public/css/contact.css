@@ -72,6 +72,11 @@
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+
+    .contact-page button {
+        width: 100%;
+        min-height: 44px;
+    }
 }
 
 .contact-details {
