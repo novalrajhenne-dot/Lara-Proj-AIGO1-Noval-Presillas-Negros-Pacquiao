@@ -1,0 +1,432 @@
+
+/* =========================================
+   SILONG CAFE - MENU PAGE
+   Member 3
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* BRAND COLORS */
+:root {
+    --menu-olive: #596344;
+    --menu-olive-dark: #414a32;
+    --menu-cream: #f7f4ec;
+    --menu-white: #fffdf8;
+    --menu-brown: #76604d;
+    --menu-text: #342f29;
+    --menu-muted: #81786d;
+    --menu-border: #e8e1d5;
+}
+
+/* GENERAL MENU RESPONSIVENESS */
+.menu-section,
+.menu-hero,
+.menu-grid,
+.menu-card,
+.menu-card-content {
+    min-width: 0;
+}
+
+.menu-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* MENU HERO */
+.menu-hero {
+    width: 100%;
+    background: var(--menu-cream);
+    padding: clamp(60px, 9vw, 105px) 24px
+             clamp(55px, 8vw, 90px);
+    text-align: center;
+}
+
+.menu-hero-content {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.menu-eyebrow {
+    color: var(--menu-olive);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.menu-hero h1 {
+    color: var(--menu-text);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 70px);
+    font-weight: 600;
+    line-height: 1.15;
+    margin: 0 0 22px;
+    overflow-wrap: break-word;
+}
+
+.menu-hero h1 span {
+    color: var(--menu-olive);
+}
+
+.menu-hero-content > p:last-child {
+    width: 100%;
+    max-width: 570px;
+    margin: 0 auto;
+    color: var(--menu-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* MENU SECTION */
+.menu-section {
+    background: var(--menu-white);
+    padding: 85px 6% 100px;
+}
+
+.menu-heading {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.menu-heading h2 {
+    color: var(--menu-text);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+.menu-heading > p:last-child {
+    color: var(--menu-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* CATEGORY FILTERS */
+.menu-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 45px;
+}
+
+.menu-filter {
+    max-width: 100%;
+    border: 1px solid var(--menu-border);
+    border-radius: 30px;
+    background: transparent;
+    color: var(--menu-text);
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 21px;
+    transition: background 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.menu-filter:hover,
+.menu-filter.active {
+    background: var(--menu-olive);
+    border-color: var(--menu-olive);
+    color: white;
+}
+
+.menu-filter:hover {
+    transform: translateY(-2px);
+}
+
+.menu-filter:focus-visible {
+    outline: 3px solid #b9a77e;
+    outline-offset: 3px;
+}
+
+/* MENU PRODUCT GRID */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* PRODUCT CARD */
+.menu-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--menu-white);
+    border: 1px solid var(--menu-border);
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(52, 47, 41, 0.035);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    border-color: #d8cfbf;
+    box-shadow: 0 14px 30px rgba(52, 47, 41, 0.11);
+}
+
+/* PRODUCT IMAGES */
+.menu-card img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    background: var(--menu-cream);
+    transition: transform 0.4s ease;
+}
+
+.menu-card:hover img {
+    transform: scale(1.035);
+}
+
+/* PRODUCT DETAILS */
+.menu-card-content {
+    padding: 23px 22px 25px;
+}
+
+.menu-category {
+    display: inline-block;
+    color: var(--menu-olive);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.menu-card h3 {
+    color: var(--menu-text);
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    overflow-wrap: break-word;
+}
+
+.menu-card-content p {
+    color: var(--menu-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 47px;
+    margin: 0 0 17px;
+    overflow-wrap: break-word;
+}
+
+.menu-price {
+    display: block;
+    color: var(--menu-olive);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* EMPTY FILTER RESULTS */
+.menu-empty-message {
+    width: 100%;
+    text-align: center;
+    color: var(--menu-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    padding: 25px 15px;
+}
+
+/* SAMPLE MENU NOTE */
+.menu-note {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    color: var(--menu-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .menu-section {
+        padding: 70px 5% 85px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .menu-filters {
+        gap: 10px;
+    }
+}
+
+/* SMALL TABLET AND LARGE PHONE */
+@media (max-width: 768px) {
+    .menu-hero {
+        padding: 70px 22px;
+    }
+
+    .menu-section {
+        padding: 60px 24px 75px;
+    }
+
+    .menu-heading {
+        margin-bottom: 32px;
+    }
+
+    .menu-filters {
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 35px;
+    }
+
+    .menu-filter {
+        font-size: 12px;
+        padding: 11px 16px;
+    }
+
+    .menu-card-content {
+        padding: 20px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .menu-hero {
+        padding: 65px 20px 55px;
+    }
+
+    .menu-eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .menu-hero h1 {
+        font-size: clamp(34px, 9vw, 46px);
+    }
+
+    .menu-hero-content > p:last-child {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .menu-section {
+        padding: 55px 18px 65px;
+    }
+
+    .menu-heading {
+        margin-bottom: 28px;
+    }
+
+    .menu-heading h2 {
+        font-size: 34px;
+    }
+
+    .menu-heading > p:last-child {
+        font-size: 14px;
+    }
+
+    /* Filters wrap instead of forcing horizontal scrolling */
+    .menu-filters {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-bottom: 30px;
+    }
+
+    .menu-filter {
+        flex: 0 1 auto;
+        font-size: 11px;
+        padding: 10px 14px;
+    }
+
+    /* One product card per row */
+    .menu-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .menu-card img {
+        aspect-ratio: 16 / 10;
+    }
+
+    .menu-card-content {
+        padding: 19px;
+    }
+
+    .menu-card h3 {
+        font-size: 22px;
+    }
+
+    .menu-card-content p {
+        min-height: auto;
+    }
+
+    .menu-note {
+        font-size: 11px;
+        line-height: 1.7;
+        margin-top: 30px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 380px) {
+    .menu-hero {
+        padding: 55px 16px 45px;
+    }
+
+    .menu-section {
+        padding: 45px 14px 55px;
+    }
+
+    .menu-filter {
+        font-size: 10px;
+        padding: 9px 12px;
+    }
+
+    .menu-card-content {
+        padding: 16px;
+    }
+
+    .menu-card h3 {
+        font-size: 20px;
+    }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    .menu-card,
+    .menu-card img,
+    .menu-filter {
+        transition: none;
+    }
+
+    .menu-card:hover,
+    .menu-filter:hover {
+        transform: none;
+    }
+
+    .menu-card:hover img {
+        transform: none;
+    }
+}
