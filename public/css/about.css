@@ -1,0 +1,526 @@
+
+/* =========================================
+   SILONG - ABOUT PAGE STYLESHEET
+   Member 2
+========================================= */
+
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.about-page {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #3b3028;
+    background-color: #faf7f1;
+    overflow: hidden;
+}
+
+.about-page h1,
+.about-page h2,
+.about-page h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.about-page p {
+    line-height: 1.8;
+}
+
+/* HERO SECTION */
+
+.about-hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 80px 8%;
+    background-color: #eee5d8;
+}
+
+.about-hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.about-eyebrow {
+    color: #98734f;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-hero h1 {
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+    color: #49372b;
+}
+
+.about-hero h1 span,
+.about-intro h2 span {
+    display: block;
+    color: #a47a50;
+    font-style: italic;
+}
+
+.about-hero-content > p:not(.about-eyebrow) {
+    font-size: 16px;
+    color: #716357;
+    margin-bottom: 30px;
+    max-width: 480px;
+}
+
+.about-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #74533a;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.about-button:hover {
+    background-color: #49372b;
+    transform: translateY(-3px);
+}
+
+.about-hero-image {
+    flex: 1;
+    max-width: 520px;
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* INTRODUCTION SECTION */
+
+.about-intro {
+    padding: 100px 15%;
+    text-align: center;
+    background-color: #faf7f1;
+}
+
+.about-intro h2 {
+    font-size: clamp(34px, 4vw, 50px);
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.about-intro > p:not(.about-eyebrow) {
+    max-width: 750px;
+    margin: 15px auto;
+    color: #75685c;
+    font-size: 16px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 900px) {
+
+    .about-hero {
+        gap: 30px;
+        padding: 60px 6%;
+    }
+
+    .about-hero-image img {
+        height: 350px;
+    }
+
+    .about-intro {
+        padding: 80px 8%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .about-hero {
+        flex-direction: column;
+        padding: 55px 7%;
+        text-align: center;
+    }
+
+    .about-hero-content {
+        width: 100%;
+    }
+
+    .about-hero-content > p:not(.about-eyebrow) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-hero h1 {
+        font-size: 42px;
+    }
+
+    .about-hero-image {
+        width: 100%;
+    }
+
+    .about-hero-image img {
+        height: 280px;
+    }
+
+    .about-intro {
+        padding: 65px 7%;
+    }
+
+    .about-intro h2 {
+        font-size: 34px;
+    }
+
+    .about-intro > p:not(.about-eyebrow) {
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   ADDITIONAL ABOUT PAGE SECTIONS
+========================================= */
+
+/* MEANING SECTION */
+
+.about-meaning,
+.about-philosophy {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    padding: 90px 9%;
+    background: #eee5d8;
+}
+
+.meaning-image,
+.philosophy-image {
+    flex: 1;
+}
+
+.meaning-image img,
+.philosophy-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.meaning-content,
+.philosophy-content {
+    flex: 1;
+}
+
+.meaning-content h2,
+.philosophy-content h2 {
+    font-size: 43px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.meaning-content h2 span,
+.philosophy-content h2 span {
+    color: #a47a50;
+    font-style: italic;
+}
+
+.meaning-content > p:not(.about-eyebrow),
+.philosophy-content > p:not(.about-eyebrow) {
+    color: #75685c;
+    margin-bottom: 15px;
+}
+
+
+/* MISSION AND VISION */
+
+.about-mission-vision {
+    padding: 90px 9%;
+    background: #faf7f1;
+}
+
+.mission-vision-heading,
+.values-heading,
+.team-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.mission-vision-heading h2,
+.values-heading h2,
+.team-heading h2 {
+    font-size: 42px;
+    color: #49372b;
+}
+
+.mission-vision-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.mission-card {
+    padding: 40px;
+    background: #eee5d8;
+    border-radius: 8px;
+    border-bottom: 4px solid #a47a50;
+}
+
+.mission-number {
+    color: #a47a50;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.mission-card h3 {
+    font-size: 28px;
+    margin: 18px 0;
+}
+
+.mission-card p {
+    color: #75685c;
+}
+
+
+/* CORE VALUES */
+
+.about-values {
+    padding: 90px 8%;
+    background: #e7dccd;
+}
+
+.values-heading > p:not(.about-eyebrow) {
+    color: #75685c;
+    margin-top: 15px;
+}
+
+.values-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.value-card {
+    padding: 28px 20px;
+    background: #faf7f1;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-7px);
+}
+
+.value-card span {
+    color: #a47a50;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.value-card h3 {
+    margin: 17px 0 12px;
+    font-size: 22px;
+}
+
+.value-card p {
+    color: #75685c;
+    font-size: 14px;
+}
+
+
+/* CAFE PHILOSOPHY */
+
+.about-philosophy {
+    background: #faf7f1;
+}
+
+
+/* TEAM SECTION */
+
+.about-team {
+    padding: 90px 8%;
+    background: #eee5d8;
+}
+
+.team-heading > p:not(.about-eyebrow) {
+    margin-top: 15px;
+    color: #75685c;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.team-card {
+    background: #faf7f1;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-7px);
+}
+
+.team-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.team-info {
+    padding: 25px;
+}
+
+.team-info h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.team-role {
+    color: #a47a50;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.team-info > p:last-child {
+    color: #75685c;
+    font-size: 14px;
+}
+
+.team-disclaimer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #75685c;
+}
+
+
+/* CLOSING SECTION */
+
+.about-closing {
+    text-align: center;
+    padding: 100px 8%;
+    background: #49372b;
+    color: #faf7f1;
+}
+
+.about-closing h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    margin-bottom: 20px;
+}
+
+.about-closing h2 span {
+    display: block;
+    color: #d5b38c;
+    font-style: italic;
+}
+
+.about-closing > p:not(.about-eyebrow) {
+    color: #e1d3c4;
+    margin-bottom: 30px;
+}
+
+.about-closing .about-eyebrow {
+    color: #d5b38c;
+}
+
+.about-closing .about-button {
+    background: #d5b38c;
+    color: #49372b;
+}
+
+.about-closing .about-button:hover {
+    background: #faf7f1;
+}
+
+
+/* READ MORE BUTTON */
+
+.read-more-btn {
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: inherit;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 1000px) {
+
+    .values-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .about-meaning,
+    .about-philosophy {
+        flex-direction: column;
+        padding: 60px 7%;
+        gap: 35px;
+    }
+
+    .meaning-image img,
+    .philosophy-image img {
+        height: 270px;
+    }
+
+    .meaning-content h2,
+    .philosophy-content h2 {
+        font-size: 34px;
+    }
+
+    .mission-vision-container {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-card {
+        padding: 28px;
+    }
+
+    .values-container {
+        grid-template-columns: 1fr;
+    }
+
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card img {
+        height: 280px;
+    }
+
+    .about-mission-vision,
+    .about-values,
+    .about-team {
+        padding: 65px 7%;
+    }
+
+    .mission-vision-heading h2,
+    .values-heading h2,
+    .team-heading h2 {
+        font-size: 34px;
+    }
+
+}
