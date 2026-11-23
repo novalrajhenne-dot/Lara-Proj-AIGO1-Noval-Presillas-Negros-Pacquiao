@@ -28,7 +28,6 @@
                 <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="{{ route('about') }}">About</a></li>
                 <li><a href="{{ route('menu') }}">Menu</a></li>
-                <li><a href="{{ route('space') }}">Our Space</a></li>
                 <li><a href="{{ route('contact') }}">Contact</a></li>
             </ul>
         </nav>
@@ -47,6 +46,10 @@
             <p class="copyright">
                 &copy; {{ date('Y') }} SILONG Café. All rights reserved.
             </p>
+            <div class="footer-team">
+    <p>Developed by:</p>
+    <p>Noval | Presillas | Negros | Pacquiao</p>
+</div>
         </div>
     </footer>
 
