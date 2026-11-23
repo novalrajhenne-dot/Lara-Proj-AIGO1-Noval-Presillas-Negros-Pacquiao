@@ -2,6 +2,7 @@
 /* =========================================
    SILONG CAFE - MENU PAGE
    Member 3
+   RESPONSIVE DESIGN
    ========================================= */
 
 /* BRAND COLORS */
@@ -16,14 +17,31 @@
     --menu-border: #e8e1d5;
 }
 
+/* GENERAL MENU RESPONSIVENESS */
+.menu-section,
+.menu-hero,
+.menu-grid,
+.menu-card,
+.menu-card-content {
+    min-width: 0;
+}
+
+.menu-section {
+    width: 100%;
+    overflow: hidden;
+}
+
 /* MENU HERO */
 .menu-hero {
+    width: 100%;
     background: var(--menu-cream);
-    padding: 105px 24px 90px;
+    padding: clamp(60px, 9vw, 105px) 24px
+             clamp(55px, 8vw, 90px);
     text-align: center;
 }
 
 .menu-hero-content {
+    width: 100%;
     max-width: 760px;
     margin: 0 auto;
 }
@@ -41,10 +59,11 @@
 .menu-hero h1 {
     color: var(--menu-text);
     font-family: 'Playfair Display', serif;
-    font-size: clamp(42px, 6vw, 70px);
+    font-size: clamp(36px, 6vw, 70px);
     font-weight: 600;
     line-height: 1.15;
     margin: 0 0 22px;
+    overflow-wrap: break-word;
 }
 
 .menu-hero h1 span {
@@ -52,6 +71,7 @@
 }
 
 .menu-hero-content > p:last-child {
+    width: 100%;
     max-width: 570px;
     margin: 0 auto;
     color: var(--menu-muted);
@@ -67,6 +87,7 @@
 }
 
 .menu-heading {
+    width: 100%;
     max-width: 700px;
     margin: 0 auto 45px;
     text-align: center;
@@ -75,7 +96,7 @@
 .menu-heading h2 {
     color: var(--menu-text);
     font-family: 'Playfair Display', serif;
-    font-size: clamp(34px, 4vw, 48px);
+    font-size: clamp(32px, 4vw, 48px);
     font-weight: 600;
     margin: 0 0 15px;
 }
@@ -94,11 +115,13 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
-    margin: 0 auto 45px;
+    width: 100%;
     max-width: 1100px;
+    margin: 0 auto 45px;
 }
 
 .menu-filter {
+    max-width: 100%;
     border: 1px solid var(--menu-border);
     border-radius: 30px;
     background: transparent;
@@ -135,12 +158,14 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 32px;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 /* PRODUCT CARD */
 .menu-card {
+    width: 100%;
     min-width: 0;
     overflow: hidden;
     background: var(--menu-white);
@@ -162,6 +187,7 @@
 .menu-card img {
     display: block;
     width: 100%;
+    max-width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     object-position: center;
@@ -195,6 +221,7 @@
     font-size: 23px;
     font-weight: 600;
     margin: 0 0 10px;
+    overflow-wrap: break-word;
 }
 
 .menu-card-content p {
@@ -204,6 +231,7 @@
     line-height: 1.8;
     min-height: 47px;
     margin: 0 0 17px;
+    overflow-wrap: break-word;
 }
 
 .menu-price {
@@ -214,8 +242,19 @@
     font-weight: 700;
 }
 
+/* EMPTY FILTER RESULTS */
+.menu-empty-message {
+    width: 100%;
+    text-align: center;
+    color: var(--menu-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    padding: 25px 15px;
+}
+
 /* SAMPLE MENU NOTE */
 .menu-note {
+    width: 100%;
     max-width: 1200px;
     margin: 40px auto 0;
     color: var(--menu-muted);
@@ -227,52 +266,104 @@
 
 /* TABLET */
 @media (max-width: 900px) {
+    .menu-section {
+        padding: 70px 5% 85px;
+    }
+
     .menu-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 24px;
     }
 
+    .menu-filters {
+        gap: 10px;
+    }
+}
+
+/* SMALL TABLET AND LARGE PHONE */
+@media (max-width: 768px) {
+    .menu-hero {
+        padding: 70px 22px;
+    }
+
     .menu-section {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding: 60px 24px 75px;
+    }
+
+    .menu-heading {
+        margin-bottom: 32px;
+    }
+
+    .menu-filters {
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 35px;
+    }
+
+    .menu-filter {
+        font-size: 12px;
+        padding: 11px 16px;
+    }
+
+    .menu-card-content {
+        padding: 20px;
     }
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
     .menu-hero {
-        padding: 75px 22px 65px;
+        padding: 65px 20px 55px;
+    }
+
+    .menu-eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .menu-hero h1 {
+        font-size: clamp(34px, 9vw, 46px);
     }
 
     .menu-hero-content > p:last-child {
         font-size: 14px;
+        line-height: 1.8;
     }
 
     .menu-section {
-        padding: 60px 20px 75px;
+        padding: 55px 18px 65px;
     }
 
     .menu-heading {
-        margin-bottom: 30px;
+        margin-bottom: 28px;
     }
 
+    .menu-heading h2 {
+        font-size: 34px;
+    }
+
+    .menu-heading > p:last-child {
+        font-size: 14px;
+    }
+
+    /* Filters wrap instead of forcing horizontal scrolling */
     .menu-filters {
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        padding: 5px 2px 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 9px;
         margin-bottom: 30px;
     }
 
     .menu-filter {
-        flex: 0 0 auto;
-        font-size: 12px;
-        padding: 10px 16px;
+        flex: 0 1 auto;
+        font-size: 11px;
+        padding: 10px 14px;
     }
 
+    /* One product card per row */
     .menu-grid {
-        grid-template-columns: 1fr;
-        gap: 23px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
     }
 
     .menu-card img {
@@ -280,11 +371,45 @@
     }
 
     .menu-card-content {
-        padding: 20px;
+        padding: 19px;
     }
 
     .menu-card h3 {
         font-size: 22px;
+    }
+
+    .menu-card-content p {
+        min-height: auto;
+    }
+
+    .menu-note {
+        font-size: 11px;
+        line-height: 1.7;
+        margin-top: 30px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 380px) {
+    .menu-hero {
+        padding: 55px 16px 45px;
+    }
+
+    .menu-section {
+        padding: 45px 14px 55px;
+    }
+
+    .menu-filter {
+        font-size: 10px;
+        padding: 9px 12px;
+    }
+
+    .menu-card-content {
+        padding: 16px;
+    }
+
+    .menu-card h3 {
+        font-size: 20px;
     }
 }
 
