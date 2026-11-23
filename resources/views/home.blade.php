@@ -55,9 +55,7 @@
                     Whether you're studying, catching up,
                     or relaxing, there's room for you here.
                 </p>
-                <a href="{{ route('space') }}" class="hero-button">
-                    Discover Our Space
-                </a>
+                
             </div>
         </div>
 
@@ -159,27 +157,6 @@
     </a>
 </section>
 
-<!-- ATMOSPHERE SECTION -->
-<section class="atmosphere-section">
-    <div class="atmosphere-content">
-        <p class="section-label">YOUR LITTLE ESCAPE</p>
-        <h2>Come as you are.<br>Stay as long as you like.</h2>
-        <p>
-            From quiet study sessions to conversations with
-            friends, SILONG is a space for every kind of moment.
-            Find your corner, settle in, and make yourself at home.
-        </p>
-        <a href="{{ route('space') }}" class="hero-button">
-            Explore Our Space
-        </a>
-    </div>
-
-    <div class="atmosphere-image">
-        <img
-            src="https://images.unsplash.com/photo-1442975631115-c4f7b05b8a2a?auto=format&fit=crop&w=1200&q=85"
-            alt="Cozy café seating area">
-    </div>
-</section>
 
 <!-- CLOSING CALL TO ACTION -->
 <section class="closing-section">
